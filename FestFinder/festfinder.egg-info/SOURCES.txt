@@ -1,8 +1,10 @@
 MANIFEST.in
 festfinder/__init__.py
 festfinder/festfinder.py
+festfinder/schema.sql
 festfinder.egg-info/PKG-INFO
 festfinder.egg-info/SOURCES.txt
 festfinder.egg-info/dependency_links.txt
 festfinder.egg-info/requires.txt
 festfinder.egg-info/top_level.txt
+festfinder/static/style.css
