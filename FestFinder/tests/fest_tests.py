@@ -9,7 +9,6 @@ class festfinderTestCase(unittest.TestCase):
         self.db_fd, festfinder.app.conffig['DATABASE'] = tempfile.mkstemp()
         festfinder.app.testing = True
         self.app = festfinder.app.test_client()
-        with festfinder.app.test_client()
         with festfinder.app.app_context():
             festfinder.init_db()
 
