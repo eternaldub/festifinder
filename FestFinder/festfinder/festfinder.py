@@ -19,12 +19,12 @@ app.config.from_envvar('FESTFINDER_SETTINGS', silent=True)
 def hello_world():
     return 'Hello World'
 
-@app.route('/login', methods=['GET, 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
         if request.form['username'] != app.config['USERNAME']:
-            error = 'Invalid username
+            error = 'Invalid username'
         elif request.form['password'] != app.config['PASSWORD']:
             error = 'Invalid password, please try again.'
         else:
@@ -33,17 +33,11 @@ def login():
             return redirect(url_for('show_entries'))
         return render_template('login.html', error=error)
 
-@app.route('logout')
+@app.route('/logout')
 def logout():
     session.pop('logged in', NONE)
     flash('Logged out')
     return redirect(url_for('show_entries'))
-
-
-
-
-
-
 
 @app.route('/')
 def show_entries():
@@ -64,7 +58,7 @@ def add_entry():
     return redirect(url_for('show_entries'))
 
 @app.route('/login', methods=['GET', 'POST'])
-def login():
+def login_check():
     error = None
     if request.method == 'POST':
         if request.form['username'] != app.config['USERNAME']:
