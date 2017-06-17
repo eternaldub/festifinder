@@ -18,6 +18,12 @@ app.config.from_envvar('FESTFINDER_SETTINGS', silent=True)
 @app.route('/')
 def hello_world():
     return 'Hello World'
+    return 'Welcome to EternalDub\'s Festival Finder!''
+
+def dub(self, *kwargs):
+    # initialize the ability to search for genres with the dub function
+    # need to implement a config file with genre's listed, possibly a text file reader
+    pass
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
