@@ -1,2 +1,2 @@
 # GET OUTTA HERE XD
-from .FestFinder import app
+from .festfinder import app
