@@ -32,4 +32,6 @@ class FestfinderTestCase(unittest.TestCase):
         os.close(self.db_fd)
         os.unlink(festfinder.app.config['DATABASE'])
 
-        
+    def test_empty_db(self):
+        rv= self.app.get('/')
+        assert b'No entries' in rv.data
