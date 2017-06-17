@@ -18,7 +18,7 @@ app.config.from_envvar('FESTFINDER_SETTINGS', silent=True)
 @app.route('/')
 def hello_world():
     return 'Hello World'
-    return 'Welcome to EternalDub\'s Festival Finder!''
+    return 'Welcome to EternalDub\'s Festival Finder!'
 
 def dub(self, *kwargs):
     # initialize the ability to search for genres with the dub function
